@@ -109,6 +109,8 @@ class SIS:
     HEADER_TOTAL_COUNT = "x-total-count"
     HEADER_AUTH_TOKEN = "x-auth-token"
 
+    QUERY_PARAMETER_OPTIONS = ['skip', 'limit', 'sort', 'lean', 'populate', 'read']
+
     @staticmethod
     def ERR_NOT_FOUND(type, id):
         return JSONResponse({"error": f"{type} {id} does not exist", "code": 1000}, status_code=404)
